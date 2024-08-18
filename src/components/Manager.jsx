@@ -33,11 +33,11 @@ const Manager = () => {
   const showPassword = () => {
     passwordRef.current.type = 'text'
     if (ref.current.src.includes("eyecross.svg")) {
-      ref.current.src = "/eye.svg"
+      ref.current.src = "dist/eye.svg"
       passwordRef.current.type = 'text'
     }
     else {
-      ref.current.src = "/eyecross.svg"
+      ref.current.src = "dist/eyecross.svg"
       passwordRef.current.type = 'password'
     }
   }
@@ -167,7 +167,7 @@ const Manager = () => {
                     <div className='flex items-center justify-center '>
                       <a href={item.site} target='_blank'>{item.site}</a>
                       <div className='cursor-pointer' onClick={() => copyText(item.site)}>
-                        <img src="/copy.svg" alt="copy" className='w-6 pl-2 pt-1' />
+                        <img src="dist/copy.svg" alt="copy" className='w-6 pl-2 pt-1' />
                       </div>
                     </div>
                   </td>
@@ -175,7 +175,7 @@ const Manager = () => {
                     <div className='flex items-center justify-center '>
                       {item.username}
                       <div className='cursor-pointer' onClick={() => copyText(item.username)}>
-                        <img src="/copy.svg" alt="copy" className='w-6 pl-2 pt-1' />
+                        <img src="dist/copy.svg" alt="copy" className='w-6 pl-2 pt-1' />
                       </div>
                     </div>
                   </td>
@@ -183,13 +183,13 @@ const Manager = () => {
                     <div className='flex items-center justify-center '>
                       {"*".repeat(item.password.length)}
                       <div className='cursor-pointer' onClick={() => copyText(item.password)}>
-                        <img src="/copy.svg" alt="copy" className='w-6 pl-2 pt-1' />
+                        <img src="dist/copy.svg" alt="copy" className='w-6 pl-2 pt-1' />
                       </div>
                     </div>
                   </td>
                   <td className='flex items-center justify-center cursor-pointer py-2 border border-white text-center gap-2'>
-                    <img onClick={() => editPassword(item.id)} src="/edit.svg" alt="" />
-                    <img onClick={() => deletePassword(item.id)} src="/delete.svg" alt="" />
+                    <img onClick={() => editPassword(item.id)} src="dist/edit.svg" alt="" />
+                    <img onClick={() => deletePassword(item.id)} src="dist/delete.svg" alt="" />
                   </td>
 
                 </tr>
